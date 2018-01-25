@@ -1,3 +1,9 @@
+.navlink {
+    color: white;
+    text-decoration: none;
+}
+
 .active {
-    color: green;
+    padding-top: 5px;
+    border-bottom: 5px solid white;
 }
