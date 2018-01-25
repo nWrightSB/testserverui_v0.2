@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
+import NavLink from '../../modules/navlink/NavLink.js'
 
 class App extends Component {
+  // WILL CONTAIN STATE
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>TS_UI</h1>
+        <ul role="nav">
+          <li><NavLink to="/history">History</NavLink></li>
+          <li><NavLink to="/run">Run</NavLink></li>
+          <li><NavLink to="/analyze">Analyze</NavLink></li>
+        </ul>
+
+        {this.props.children}
       </div>
     );
   }
