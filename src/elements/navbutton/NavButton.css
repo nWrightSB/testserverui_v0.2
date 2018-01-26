@@ -1,0 +1,10 @@
+.navbutton {
+    color: blue;
+    background-color: white;
+    text-decoration: none;
+}
+
+.active {
+    padding-top: 5px;
+    border-bottom: 5px solid white;
+}

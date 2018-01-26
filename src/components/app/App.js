@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { IndexLink } from 'react-router';
 import './App.css';
-import NavLink from '../../modules/navlink/NavLink.js'
+import NavLink from '../../elements/navlink/NavLink.js';
+import NavButton from '../../elements/navbutton/NavButton.js';
 
 class App extends Component {
   // WILL CONTAIN STATE
@@ -15,26 +16,13 @@ class App extends Component {
               <img src={"./ts_crop.jpg"} alt="Testserver_UI"/>
             </div>
           </IndexLink>
-          <NavLink to="/history">
-            <div className="nav-link-container">
-              History
-            </div>
-          </NavLink>
-          <NavLink to="/run">
-            <div className="nav-link-container">
-              Run
-            </div>
-          </NavLink>
-          <NavLink to="/analyze">
-            <div className="nav-link-container">
-              Analyze
-            </div>
-          </NavLink>
+          <NavLink to="/history" text="History" />
+          <NavLink to="/run" text="Run" />
+          <NavLink to="/analyze" text="Analyze" />
+          <NavButton to="/login" text="Login" />
           {/* LOGIN BUTTON/COMPONENT SHOULD GO HERE IN REMAINING 10PX, SIMILAR TO HOW IT WAS IN 0.1 WHERE IT CONTAINS ITS OWN LOGIC TO VERIFY IF USER DATA IS BEING PASSED DOWN */}
         </div>
-
         {this.props.children}
-
       </div>
     );
   }
