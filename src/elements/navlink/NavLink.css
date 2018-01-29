@@ -1,6 +1,12 @@
 .navlink {
     color: white;
     text-decoration: none;
+    transition: all .1s ease; 
+}
+
+.navlink:hover {
+    /* padding-top: 5px; */
+    border-bottom: 5px solid white;
 }
 
 .active {

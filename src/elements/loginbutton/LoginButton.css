@@ -1,0 +1,27 @@
+.login-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #2f54eb;
+    width: 12.5vw;
+    transition: all .1s ease;
+}
+
+.login-button-container:hover {
+    cursor: pointer;
+    color: #2f54eb;
+    border-bottom: 5px solid #2f54eb;
+}
+
+.login-button {
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+.active {
+    padding-top: 5px;
+    border-bottom: 5px solid white;
+}

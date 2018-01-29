@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: row;
   height: 50px;
-  background-color: #1890ff;
+  background-color: #2f54eb;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 15vw;
+  width: 12.5vw;
   height: 100%;
 }
 

@@ -12,10 +12,10 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render((
     <Router history={browserHistory}>
         <Route path="/" component={App}>
-            <IndexRoute component={Home}/>
-            <Route path="/analyze" component={Analyze}/>
-            <Route path="/run" component={Run}/>
-            <Route path="/history" component={History}/>
+            <IndexRoute component={Home} />
+            <Route path="/analyze" component={Analyze} />
+            <Route path="/run" component={Run} />
+            <Route path="/history" component={History} />
         </Route>
     </Router>
 ), document.getElementById('root'));
