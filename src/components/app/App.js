@@ -21,10 +21,6 @@ class App extends Component {
   handleLogin(username, password) {
     let reqObj = {
       url: this.state.testserver + '/v1/readyapi/executions',
-      headers: {
-        'access-control-allow-headers': '*',
-        'access-control-allow-origin': '*'
-      },
       auth: {
         'user': username,
         'pw': password
