@@ -17,7 +17,7 @@ const LoginButton = props => {
   function handleEvent(event) {
     // SHOULD BRING UP LOGIN MODAL
     // SHOULD INVOKE LOGIN OR LOGOUT FUNCTION DEPENDING ON STATE
-    props.handleLogin("defaultUser", "newPass")
+    props.handleLogin("testUser", "testPass")
   }
   
   return (
