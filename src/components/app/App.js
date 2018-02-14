@@ -25,6 +25,7 @@ class App extends Component {
       }
     }
     this.handleLogin = this.handleLogin.bind(this)
+    this.handleLogout = this.handleLogout.bind(this)
   }
 
   handleLogin(username, password) {
@@ -60,6 +61,17 @@ class App extends Component {
     })
   }
 
+  handleLogout() {
+    let userData = {...this.state.userData}
+
+    userData.currentUser = null;
+    userData.currentPass = null;
+
+    this.setState({
+      userData
+    })
+  }
+
   render() {
     return (
       <div>
@@ -74,6 +86,7 @@ class App extends Component {
           <NavLink
             to={"/history"}
             text={"History"}
+            data={this.state.resultsData}
           />
           <NavLink 
             to={"/run"}
@@ -88,6 +101,7 @@ class App extends Component {
             text={"Login"} 
             userData={this.state.userData}
             handleLogin={this.handleLogin}
+            handleLogout={this.handleLogout}
           />
         </div>
         {this.props.children}
