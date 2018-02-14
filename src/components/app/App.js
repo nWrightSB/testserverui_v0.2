@@ -42,17 +42,21 @@ class App extends Component {
       .then(response => {
         return response.json()
       }).then(json => {
+        let userData = {...this.state.userData}
+        let resultsData = {...this.state.resultsData}
+
+        userData.currentUser = username;
+        userData.currentPass = password;
+        resultsData.executions = json.projectResultReports;
+
         //SET STATE W/RESULTS
         this.setState({
-          userData: {
-            currentUser: username,
-            currentPass: password
-          }
+          userData,
+          resultsData
         })
-        console.log(this.state)
       })
       .catch(function(error){
-        console.log(error)
+        console.log('ERROR: ' + error)
     })
   }
 
@@ -82,7 +86,7 @@ class App extends Component {
           {/*LOGIN BUTTON*/}
           <LoginButton
             text={"Login"} 
-            userdata={this.state.userData}
+            userData={this.state.userData}
             handleLogin={this.handleLogin}
           />
         </div>

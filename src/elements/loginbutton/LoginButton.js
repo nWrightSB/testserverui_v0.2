@@ -2,15 +2,15 @@ import React from 'react';
 import './LoginButton.css'
 
 const LoginButton = props => {
-  let current_user = props.userdata.current_user;
-  let current_pw = props.userdata.current_user;
+  let currentUser = props.userData.currentUser;
+  // let currentPass = props.userData.currentPass;
   let buttonText = null;
   let buttonIcon = "fa fa-user-o";
   
-  if (!current_user) {
+  if (!currentUser) {
     buttonText = "Login"
   } else {
-    buttonText = "Logout " + current_user
+    buttonText = "Logout " + currentUser
     buttonIcon = "fa fa-user"
   }
 
