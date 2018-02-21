@@ -1,10 +1,19 @@
+.login-element-container {
+    display: flex;
+    flex-direction: column;
+    width: 12.5vw;
+    align-items: center;
+}
+
 .login-button-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
     background-color: white;
     color: #2f54eb;
-    width: 12.5vw;
     transition: all .1s ease;
 }
 
@@ -12,6 +21,23 @@
     cursor: pointer;
     color: #2f54eb;
     border-bottom: 5px solid #2f54eb;
+}
+
+.login-fields-container {
+    display: none;
+    background-color: white;
+    width: 100%;
+}
+
+.login-fields {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-fields input {
+    margin: 5px;
 }
 
 .login-button {
