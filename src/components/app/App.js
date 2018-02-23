@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       userData: {
         currentUser: null,
-        currentPass: null
+        currentPass: null,
+        error: null
       },
       resultsData: {
         executions: [],
@@ -38,7 +39,6 @@ class App extends Component {
         }
       }
     };
-
     fetch(reqObj.url, reqObj.config)
       .then(response => {
         return response.json()
@@ -56,8 +56,12 @@ class App extends Component {
           resultsData
         })
       })
-      .catch(function(error){
-        console.log('ERROR: ' + error)
+      .catch(error => {
+        let userData = {...this.state.userData}
+        userData.error = error.toString();
+        this.setState({
+          userData
+        })
     })
   }
 
@@ -79,14 +83,13 @@ class App extends Component {
           {/*INDEX LINK AND LOGO*/}
           <IndexLink to="/">
             <div className="nav-logo-container">
-              <img src={"./ts_crop.jpg"} alt="Testserver_UI"/>
+              {/*<img src={"./ts_crop.jpg"} alt="Testserver_UI"/>*/}
             </div>
           </IndexLink>
           {/*NAVBAR LINKS*/}
           <NavLink
             to={"/history"}
             text={"History"}
-            data={this.state.resultsData}
           />
           <NavLink 
             to={"/run"}
@@ -104,7 +107,9 @@ class App extends Component {
             handleLogout={this.handleLogout}
           />
         </div>
-        {this.props.children}
+        {this.props.children && React.cloneElement(this.props.children,{
+          resultsData: this.state.resultsData
+        })}
       </div>
     );
   }
