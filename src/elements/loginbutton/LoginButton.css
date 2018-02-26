@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 12.5vw;
     align-items: center;
+    z-index: 100;
 }
 
 .login-button-container {
@@ -37,6 +38,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: white;
 }
 
 .login-fields input {

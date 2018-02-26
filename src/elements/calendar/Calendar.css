@@ -1,0 +1,19 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.month-container {
+    width: 100%;
+    background-color: #2f54eb;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.days-display-container {
+    width: 100%;
+    height: 33%;
+    background-color: white;
+}

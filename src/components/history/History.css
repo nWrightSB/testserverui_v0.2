@@ -1,0 +1,26 @@
+.history-container {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 0;
+}
+
+.calendar-container {
+    width: 25vw;
+    height: 100%;
+    background-color: tomato;
+}
+
+.projects-container {
+    width: 25vw;
+    height: 100%;
+    background-color: thistle;
+}
+
+.code-container {
+    width: 50vw;
+    height: 100%;
+    background-color: slateblue;
+}

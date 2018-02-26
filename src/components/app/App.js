@@ -83,7 +83,7 @@ class App extends Component {
           {/*INDEX LINK AND LOGO*/}
           <IndexLink to="/">
             <div className="nav-logo-container">
-              {/*<img src={"./ts_crop.jpg"} alt="Testserver_UI"/>*/}
+              <img src={"./ts_crop.jpg"} alt="Testserver_UI"/>
             </div>
           </IndexLink>
           {/*NAVBAR LINKS*/}
