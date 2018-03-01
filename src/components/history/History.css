@@ -7,10 +7,21 @@
     z-index: 0;
 }
 
-.calendar-container {
-    width: 25vw;
+.first-column {
+    display: flex;
     height: 100%;
+    flex-direction: column;
+}
+
+.calendar-container {
     background-color: tomato;
+    width: 25vw;
+    height: 80%;
+}
+
+.executions-container {
+    height: 100%;
+    background-color: palegoldenrod;
 }
 
 .projects-container {
