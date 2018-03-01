@@ -27,6 +27,7 @@ class App extends Component {
     }
     this.handleLogin = this.handleLogin.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
+    this.handleSelectProject = this.handleSelectProject.bind(this)
   }
 
   handleLogin(username, password) {
@@ -76,6 +77,10 @@ class App extends Component {
     })
   }
 
+  handleSelectProject(executionID) {
+    console.log(executionID)
+  }
+
   render() {
     return (
       <div>
@@ -108,7 +113,8 @@ class App extends Component {
           />
         </div>
         {this.props.children && React.cloneElement(this.props.children,{
-          resultsData: this.state.resultsData
+          resultsData: this.state.resultsData,
+          handleSelectProject: this.handleSelectProject
         })}
       </div>
     );

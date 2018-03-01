@@ -1,19 +1,34 @@
 import React from 'react';
-import './Executions.css'
+import ExecutionRow from './ExecutionRow'
+import './Executions.css';
 
 const Executions = props => {
-  let resultsData = props.resultsData;
+  let executionData = props.resultsData['executions']
+  let projectsRowArray = [];
+
+  if (executionData) {
+    for (let i = 0; i < executionData.length; i++) {
+        projectsRowArray.push(
+            <ExecutionRow 
+                key={i}
+                rowData={executionData[i]}
+                handleSelectProject={props.handleSelectProject}
+            />
+        )
+    }
+  }
 
   return (
     <div className="history-table-container">
         <table className="history-table">
             <tbody>
                 <tr className="history-table-heading">
-                    <th id="project-header">Project</th>
-                    <th><i className="fa fa-check success-v" aria-hidden="true"></i></th>
-                    <th><i className="fa fa-times fail-x" aria-hidde="true"></i></th>
-                    <th><i className="far fa-clock" aria-hidde="true"></i></th>
+                    <th><i className="far fa-clock" aria-hidden="true"></i></th>
+                    <th>Project</th>
+                    <th>Status</th>
+                    <th></th>
                 </tr>
+                {projectsRowArray}
             </tbody>
         </table>
     </div>

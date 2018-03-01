@@ -16,10 +16,10 @@ const History = props => {
         <div className="executions-container">
           <Executions
             resultsData={resultsData}
+            handleSelectProject={props.handleSelectProject}
           />
         </div>
       </div>
-      
       {/* PROJECT COLUMN SHOWS PROJECT INFO, TESTSUITES AND TESTCASES */}
       <div className="projects-container">
         Projects
