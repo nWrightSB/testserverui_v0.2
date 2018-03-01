@@ -20,11 +20,12 @@ const ExecutionRow = props => {
 
     // <th><i className="fa fa-check success-v" aria-hidden="true"></i></th>
     // <th><i className="fa fa-times fail-x" aria-hidden="true"></i></th>
+    // onClick={() => props.handleSelectProject(executionID)}
 
     console.log(rowData)
 
     return (
-        <tr className="execution-row" onClick={() => handleSelectProject(executionID)} >
+        <tr className="execution-row" onClick={() => props.handleSelectProject(executionID)}>
             <td>{startTime}</td>
             <td>{projectName}</td>
             <td><i className={statusIcon}></i></td>
