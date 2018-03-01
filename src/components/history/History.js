@@ -10,7 +10,7 @@ const History = props => {
     <div className="history-container">
       {/* CALENDER COLUMN SHOWS EXECUTIONS FOR A GIVEN DATE */} 
       <div className="first-column">
-        <div className="calendar-container">
+        <div className="calendar-element-container">
           <Calendar />
         </div>
         <div className="executions-container">

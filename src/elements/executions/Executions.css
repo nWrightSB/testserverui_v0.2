@@ -1,0 +1,32 @@
+.history-table-container {
+    width: 100%;
+}
+
+.history-table {
+    width: 100%;
+    border-spacing: 0 0;
+}
+
+.history-table-heading {
+    color: #2f54eb;
+    text-align: center;
+}
+
+.history-table-heading th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+    border-collapse: collapse;
+}
+
+#project-header {
+    width: 50%;
+}
+
+.fail-x {
+    color: #FF4136;
+}
+
+.success-v {
+    color: #2ECC40;
+}
