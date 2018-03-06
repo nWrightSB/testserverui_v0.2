@@ -7,7 +7,6 @@ const Project = props => {
   let startTime = null;
   let status = null;
   let timeTaken = null;
-  let newVal = null;
 
   if (projectData) {
       projectName = projectData['projectName']
