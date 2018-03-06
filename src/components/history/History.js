@@ -1,6 +1,7 @@
 import React from 'react';
 import Calendar from '../../elements/calendar/Calendar.js'
 import Executions from '../../elements/executions/Executions.js'
+import Project from '../../elements/project/Project.js'
 import './History.css'
 
 const History = props => {
@@ -22,7 +23,9 @@ const History = props => {
       </div>
       {/* PROJECT COLUMN SHOWS PROJECT INFO, TESTSUITES AND TESTCASES */}
       <div className="projects-container">
-        Projects
+        <Project
+          resultsData={resultsData}
+        />
       </div>
       <div className="code-container">
         Code

@@ -6,7 +6,6 @@ import { IndexLink } from 'react-router';
 import './App.css';
 import NavLink from '../../elements/navlink/NavLink.js';
 import LoginButton from '../../elements/loginbutton/LoginButton.js';
-import Executions from '../../elements/executions/Executions';
 
 class App extends Component {
   constructor(props) {
@@ -19,10 +18,10 @@ class App extends Component {
       },
       resultsData: {
         executions: [],
-        project: [],
-        testSuites: [],
-        testCases: [],
-        testSteps: [],
+        project: null,
+        testSuite: null,
+        testCase: [],
+        testStep: [],
         transactionDetails: []
       }
     }
@@ -78,12 +77,26 @@ class App extends Component {
     })
   }
 
-  handleSelectProject(executionID) {
+  handleSelectProject(elementID, executionID) {
     let resultsData = {...this.state.resultsData}
-
+    let clickedElement = document.getElementById("execution-row-" + elementID)
+    // HANDLE STYLE
+    // clickedElement.style.backgroundColor = '#c0cbf9'
+    // clickedElement.style.borderBottom = "3px solid #2f54eb"
+    // HANDLE STATE
     for (let i = 0; i < resultsData['executions'].length; i++) {
       if (resultsData['executions'][i]['executionID'] === executionID) {
-        resultsData['project'].push(resultsData['executions'][i])
+        let targetProject = resultsData['executions'][i];
+
+        resultsData['project'] = {
+          executionID: targetProject['executionID'],
+          projectName: targetProject['projectName'],
+          startTime: targetProject['startTime'],
+          status: targetProject['status'],
+          timeTaken: targetProject['timeTaken']
+        };
+        resultsData['testSuites'] = targetProject['testSuiteResultReports'];
+
         this.setState({
           resultsData
         })

@@ -11,6 +11,7 @@ const Executions = props => {
         projectsRowArray.push(
             <ExecutionRow 
                 key={i}
+                id={i}
                 rowData={executionData[i]}
                 handleSelectProject={props.handleSelectProject}
             />

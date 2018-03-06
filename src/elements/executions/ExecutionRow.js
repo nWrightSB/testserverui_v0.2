@@ -5,6 +5,7 @@ const ExecutionRow = props => {
     // HIGH LEVEL DATA OBJECTS
     let rowData = props.rowData;
     let status = rowData['status'];
+    let elementID = "execution-row-" + props.id
     // TO RENDER IN ROW
     let projectName = rowData['projectName'];
     let executionID = rowData['executionID']
@@ -18,14 +19,8 @@ const ExecutionRow = props => {
         statusIcon = "fa fa-check success-v"
     }
 
-    // <th><i className="fa fa-check success-v" aria-hidden="true"></i></th>
-    // <th><i className="fa fa-times fail-x" aria-hidden="true"></i></th>
-    // onClick={() => props.handleSelectProject(executionID)}
-
-    console.log(rowData)
-
     return (
-        <tr className="execution-row" onClick={() => props.handleSelectProject(executionID)}>
+        <tr id={elementID} className="execution-row" onClick={() => props.handleSelectProject(props.id, executionID)}>
             <td>{startTime}</td>
             <td>{projectName}</td>
             <td><i className={statusIcon}></i></td>
