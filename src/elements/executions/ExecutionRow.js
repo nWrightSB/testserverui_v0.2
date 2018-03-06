@@ -14,7 +14,7 @@ const ExecutionRow = props => {
 
     if (status === "FAILED") {
         statusIcon = "fa fa-times fail-x"
-    } else if (status === "SUCCESS") {
+    } else if (status === "FINISHED") {
         statusIcon = "fa fa-check success-v"
     }
 

@@ -6,6 +6,7 @@ import { IndexLink } from 'react-router';
 import './App.css';
 import NavLink from '../../elements/navlink/NavLink.js';
 import LoginButton from '../../elements/loginbutton/LoginButton.js';
+import Executions from '../../elements/executions/Executions';
 
 class App extends Component {
   constructor(props) {
@@ -78,7 +79,16 @@ class App extends Component {
   }
 
   handleSelectProject(executionID) {
-    console.log(executionID)
+    let resultsData = {...this.state.resultsData}
+
+    for (let i = 0; i < resultsData['executions'].length; i++) {
+      if (resultsData['executions'][i]['executionID'] === executionID) {
+        resultsData['project'].push(resultsData['executions'][i])
+        this.setState({
+          resultsData
+        })
+      }
+    }
   }
 
   render() {
