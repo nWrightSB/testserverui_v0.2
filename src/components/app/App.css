@@ -3,6 +3,7 @@
 }
 
 #nav-bar {
+  position: relative;
   display: flex;
   flex-direction: row;
   height: 50px;

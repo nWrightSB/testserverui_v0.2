@@ -1,0 +1,25 @@
+.project-container {
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    transition: all .1s ease;
+}
+
+.project-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh;
+}
+
+.project-name-container {
+    width: 100%;
+    background-color: #6d87f1;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #FF4136;
+}

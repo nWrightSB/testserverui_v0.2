@@ -1,0 +1,61 @@
+/* EXECUTIONS TABLE STYLING */
+
+.history-table-container {
+    width: 100%;
+}
+
+.history-table {
+    width: 100%;
+    border-spacing: 0 0;
+}
+
+.history-table-heading {
+    color: #2f54eb;
+    text-align: center;
+}
+
+.history-table-heading th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+    border-collapse: collapse;
+}
+
+.fail-x {
+    color: #FF4136;
+}
+
+.success-v {
+    color: #2ECC40;
+}
+
+/* EXECUTION ROW STYLING */
+
+.execution-row {
+    text-align: center;
+}
+
+.execution-row:hover {
+    /* background-color: lightgrey; */
+    cursor: pointer;
+    transition: background-color .1s ease;
+}
+
+.execution-row:hover td {
+    border-bottom: 3px solid #2f54eb;
+    transition: border-bottom .1s ease;
+}
+
+.execution-row:hover .caret-cell {
+    color: #2f54eb;
+    transition: all .1s ease;
+}
+
+.execution-row td {
+    border-bottom: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.caret-cell {
+    color: white;
+}
