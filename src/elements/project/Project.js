@@ -2,8 +2,8 @@ import React from 'react';
 import './project.css';
 
 const Project = props => {
-  let projectData = props.resultsData['project']
-  let projectName = null
+  let projectData = props.resultsData['executions'][props.resultsData.projectId];
+  let projectName = null;
   let startTime = null;
   let status = null;
   let timeTaken = null;
@@ -16,7 +16,7 @@ const Project = props => {
   }
 
   return (
-    <div className="project-container">
+    <div id="project-container" className="project-container">
         <div className="project-info-container">
             <div className="project-name-container">
                 {projectName}

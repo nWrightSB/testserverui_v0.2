@@ -18,11 +18,11 @@ class App extends Component {
       },
       resultsData: {
         executions: [],
-        project: null,
-        testSuite: null,
-        testCase: [],
-        testStep: [],
-        transactionDetails: []
+        projectId: null,
+        testSuiteId: null,
+        testCaseId: null,
+        testStepId: null,
+        transactionDetails: {}
       }
     }
     this.handleLogin = this.handleLogin.bind(this)
@@ -68,34 +68,40 @@ class App extends Component {
 
   handleLogout() {
     let userData = {...this.state.userData}
-
+    let resultsData = {...this.state.resultsData}
+    // HANDLE STYLE RESET -- COLLAPSE PROJECT + CODE COLUMNS
+    let projectContainer = document.getElementById('project-container')
+    projectContainer.style.display = "none"
+    // HANDLE STATE RESET
     userData.currentUser = null;
     userData.currentPass = null;
-
+    resultsData = {
+      executions: [],
+      project: null,
+      testSuite: null,
+      testCase: [],
+      testStep: [],
+      transactionDetails: []
+    }
     this.setState({
-      userData
+      userData,
+      resultsData
     })
   }
 
   handleSelectProject(elementID, executionID) {
     let resultsData = {...this.state.resultsData}
-    let clickedElement = document.getElementById("execution-row-" + elementID)
+    
     // HANDLE STYLE
+    // let clickedElement = document.getElementById("execution-row-" + elementID)
     // clickedElement.style.backgroundColor = '#c0cbf9'
     // clickedElement.style.borderBottom = "3px solid #2f54eb"
+    document.getElementById('project-container').style.display = "flex"
+
     // HANDLE STATE
     for (let i = 0; i < resultsData['executions'].length; i++) {
       if (resultsData['executions'][i]['executionID'] === executionID) {
-        let targetProject = resultsData['executions'][i];
-
-        resultsData['project'] = {
-          executionID: targetProject['executionID'],
-          projectName: targetProject['projectName'],
-          startTime: targetProject['startTime'],
-          status: targetProject['status'],
-          timeTaken: targetProject['timeTaken']
-        };
-        resultsData['testSuites'] = targetProject['testSuiteResultReports'];
+        resultsData['projectId'] = i;
 
         this.setState({
           resultsData

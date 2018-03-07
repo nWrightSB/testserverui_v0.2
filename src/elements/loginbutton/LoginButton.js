@@ -29,7 +29,7 @@ const LoginButton = props => {
     if (!currentUser) {
       loginFieldsContainer.style.display = "block"
       document.getElementsByClassName("login-button")[0].style.paddingBottom = "10px";
-      document.getElementsByClassName("login-button-container")[0].style.borderBottom = "5px solid #2f54eb";
+      // document.getElementsByClassName("login-button-container")[0].style.borderBottom = "5px solid #2f54eb";
     }
 
     if (!currentUser && loginFieldUsername && loginFieldPassword) {
