@@ -7,23 +7,37 @@ const Project = props => {
   let startTime = null;
   let status = null;
   let timeTaken = null;
+  let executionID = null;
 
   if (projectData) {
       projectName = projectData['projectName']
       startTime = projectData['startTime']
       status = projectData['status']
       timeTaken = projectData['timeTaken']
+      executionID = projectData['executionID']
+      console.log(projectData)
   }
 
   return (
     <div id="project-container" className="project-container">
         <div className="project-info-container">
             <div className="project-name-container">
-                {projectName}
+                <h2>{projectName}</h2>
+                <br/>
+                <h3>{executionID}</h3>
             </div>
-            {status}
-            <h2>Start Time: {startTime}</h2>
-            <h2>Time Taken: {timeTaken} ms</h2>
+            <div className="status-container">
+                {status}
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            test
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         
     </div>

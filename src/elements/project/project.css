@@ -16,10 +16,34 @@
 
 .project-name-container {
     width: 100%;
-    background-color: #6d87f1;
+    background-color: #4667ed;
     color: white;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 7px;
-    border-bottom: 3px solid #FF4136;
+}
+
+.project-name-container h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 110%;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.project-name-container h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 75%;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.status-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    background-color: #FF4136;
+    width: 100%;
+    text-align: center;
+    color: white;
 }

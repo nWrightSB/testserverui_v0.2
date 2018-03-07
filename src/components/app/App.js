@@ -141,10 +141,13 @@ class App extends Component {
             handleLogout={this.handleLogout}
           />
         </div>
-        {this.props.children && React.cloneElement(this.props.children,{
-          resultsData: this.state.resultsData,
-          handleSelectProject: this.handleSelectProject
-        })}
+        <div className="app-body">
+          {this.props.children && React.cloneElement(this.props.children,{
+            resultsData: this.state.resultsData,
+            userData: this.state.userData,
+            handleSelectProject: this.handleSelectProject
+          })}
+        </div>
       </div>
     );
   }
